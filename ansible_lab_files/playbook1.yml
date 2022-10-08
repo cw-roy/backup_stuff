@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars:
+    first_name: James
+    last_name: Bond
+  tasks:
+    - name: first_name_last_name
+      debug:
+        msg: "The name is {{ last_name }}; {{ first_name }} {{ last_name }}."

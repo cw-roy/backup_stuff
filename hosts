@@ -1,0 +1,27 @@
+[all]
+
+Host student12-1
+    Hostname 34.73.221.45
+    User ubuntu
+    IdentityFile /home/croy/id_ansible
+
+Host student12-2
+    Hostname 35.227.81.102
+    User ubuntu
+    IdentityFile /home/croy/id_ansible
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/croy/id_ansible
+
+[db]
+
+student12-1 ansible_host=34.73.221.45
+student12-2 ansible_host=35.227.81.102
+
+[web]
+
+student12-1 ansible_host=34.73.221.45
+
+

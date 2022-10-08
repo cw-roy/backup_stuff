@@ -1,0 +1,39 @@
+Create a new branch
+	git branch <branchname>
+
+Switch to the new branch
+	git switch <branchname>
+	(to verify: git status or git branch)
+----------
+Add your changes to the Staging Area
+	git add . (add current directory recursively)
+	OR
+	git add <filename> (add specific files / paths)
+
+Commit your changes to your local repository (does not affect Github).  
+	git commit (Enter commit message)
+	(to verify: git log)
+
+Push the new branch and commits to the remote repository on Github
+	git push origin <branchname from earlier in steps>
+
+In GitHub, navigate to repository and select branch button (center top, tree icon)
+
+Next to the new branch name, select Create Pull Request
+	MAKE SURE THE CORRECT REPOSITORY IS THE DESTINATION.  <--
+	Enter title, description, etc.
+
+Create the Pull Request (wait)
+
+In the new Pull Request, approve  
+
+Choose Merge at the bottom of the page
+
+In Terminal on local machine, switch back to the primary branch
+	git switch <primary> (usually “main” or “master”)
+
+Pull down the latest changes (your merge) from Github
+	git pull origin <primary>
+
+OPTIONAL: Clean up your now-merged task branch
+	git branch -d <branchname>

@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: number_random
+      copy:
+        dest: "/tmp/random_number"
+        content: "Random number is {{ 100 | random }}.\n"
